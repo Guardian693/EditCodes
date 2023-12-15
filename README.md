@@ -29,3 +29,9 @@ Ans class Solution:
                 return [num_indices[complement], i]
             num_indices[num] = i
 
+1929. Concatenation of Array
+Ans  class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        ans = nums + nums
+        return ans
+
