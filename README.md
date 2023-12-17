@@ -45,4 +45,21 @@ Ans class Solution:
             ans[i] = nums[nums[i]]
         return ans
 
-5.
+5. (1512.) Number of Good Pairs   (  A good pair is defined as a pair of indices (i, j) where nums[i] is equal to nums[j] and i is less than j.)
+Ans class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        count = 0
+        num_counts = {}
+
+        for num in nums:
+            if num in num_counts:
+                num_counts[num] += 1
+            else:
+                num_counts[num] = 1
+        
+        for key in num_counts:
+            occurence = num_counts[key]
+            if occurence > 1:
+                count += (occurence * (occurence - 1)) // 2       # formula used is nc2 to identify the occurences
+
+        return count
