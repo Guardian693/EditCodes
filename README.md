@@ -63,3 +63,17 @@ Ans class Solution:
                 count += (occurence * (occurence - 1)) // 2       # formula used is nc2 to identify the occurences
 
         return count
+
+6. (2011.) Final Value of Variable After Performing Operations
+Ans class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
+        X = 0
+        for operation in operations:
+            if operation == '++X' or operation == 'X++':
+                X += 1
+            if operation == '--X' or operation == 'X--':
+                X -= 1
+        return X
+
+
+
