@@ -94,7 +94,17 @@ Ans class Solution:
             if x in word:
                 result.append(index)
         return result
-9. 
+9. (1672.) Richest Customer Wealth
+Ans class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        max_wealth = 0
+        for customer in accounts:
+            wealth = sum(customer)
+
+            if wealth > max_wealth:
+                max_wealth = wealth
+        return max_wealth
+
 
 
 
