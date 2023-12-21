@@ -93,6 +93,7 @@ Ans class Solution:
             if x in word:
                 result.append(index)
         return result
+9. 
 
 
 
