@@ -65,7 +65,6 @@ Ans class Solution:
         return count
 
 6. (2011.) Final Value of Variable After Performing Operations
-   
 Ans class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         X = 0
@@ -76,8 +75,8 @@ Ans class Solution:
                 X -= 1
         return X
 
-7. (1470.) Shuffle the Array
 
+7. (1470.) Shuffle the Array
 Ans  class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         result = []
@@ -85,6 +84,8 @@ Ans  class Solution:
             result.append(nums[i])
             result.append(nums[i+n])
         return result
+
+
 8. (2942.) Find Words Containing Character 
 Ans class Solution:
     def findWordsContaining(self, words: List[str], x: str) -> List[int]:
