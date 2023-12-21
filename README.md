@@ -104,6 +104,44 @@ Ans class Solution:
             if wealth > max_wealth:
                 max_wealth = wealth
         return max_wealth
+10. (2798.) Number of Employees Who Met the Target
+Ans class Solution:
+    def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:
+        count = 0
+        for hour in hours:
+            if hour >= target: 
+                count += 1
+        return count
+          or
+    class Solution:
+    def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:
+        return sum(1 for hour in hours if hour >= target)
+
+11. (1431.) Kids With the Greatest Number of Candies
+Ans python class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        max_candies = max(candies)
+
+        result = []
+
+        for candy in candies:
+            if candy + extraCandies >= max_candies:
+                result.append(True)
+            else:
+                result.append(False)
+        return result 
+
+    python3 class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        result = []
+        max_candies = max(candies)
+        for candy in candies:
+            if candy + extraCandies >= max_candies:
+                result.append(True)
+            else:
+                result.append(False)
+        return result
+12. 
 
 
 
