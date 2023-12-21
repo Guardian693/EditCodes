@@ -141,7 +141,7 @@ Ans python class Solution(object):
             else:
                 result.append(False)
         return result
-12. 
+12. (2824.) Count Pairs Whose Sum is Less than Target
 
 
 
