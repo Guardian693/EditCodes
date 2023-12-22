@@ -141,7 +141,22 @@ Ans python class Solution(object):
             else:
                 result.append(False)
         return result
-12. (2824.) Count Pairs Whose Sum is Less than Target
+12. (136.) Single Number
+Ans  class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        result = 0
+        for num in nums:
+            result ^= num     # we xor each element in the row.  
+        return result
+
+'''since in xor same element result in 0 and different element result in 1. it takes the binary value and then it does the xor operation. 
+# For nums = [4, 1, 2, 1, 2]:
+ result starts as 0.
+result ^= 4 -> result = 0 ^ 4 = 4.
+result ^= 1 -> result = 4 ^ 1 = 5.
+result ^= 2 -> result = 5 ^ 2 = 7.
+result ^= 1 -> result = 7 ^ 1 = 6.
+result ^= 2 -> result = 6 ^ 2 = 4. '''
 
 
 
