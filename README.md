@@ -158,7 +158,20 @@ result ^= 2 -> result = 5 ^ 2 = 7.
 result ^= 1 -> result = 7 ^ 1 = 6.
 result ^= 2 -> result = 6 ^ 2 = 4. '''
 
-13. 
+13. (169.) Majority Element
+Ans class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        count = 0
+        canditate = None
+
+        for num in nums:
+            if count == 0:
+                candidate = num
+            count += 1 if num == candidate else -1    # if the count is <1 after the loopin the entire array then the candidate take the next element as the candidate and the process continues until the count is > 1  
+        return candidate
+''' 
+The above code select the first element and then loops around the entire array if the element in the index is the same as the candidate one then the count is increased. the logic of the thing is that the count of the majority element will not be 0 
+'''
 
 
 
