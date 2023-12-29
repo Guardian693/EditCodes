@@ -173,4 +173,5 @@ Ans class Solution:
 The above code select the first element and then loops around the entire array if the element in the index is the same as the candidate one then the count is increased. the logic of the thing is that the count of the majority element will not be 0 
 '''
 
-14. 283. Move Zeroes 
+14. 283. Move Zeroes
+    
