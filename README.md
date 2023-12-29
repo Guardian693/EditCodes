@@ -167,11 +167,27 @@ Ans class Solution:
         for num in nums:
             if count == 0:
                 candidate = num
-            count += 1 if num == candidate else -1    # if the count is <1 after the loopin the entire array then the candidate take the next element as the candidate and the process continues until the count is > 1  
+            count += 1 if num == candidate else -1    # if the count is <1 after the loop in the entire array then the candidate takes the next element as the candidate and the process continues until the count is > 1  
         return candidate
 ''' 
-The above code select the first element and then loops around the entire array if the element in the index is the same as the candidate one then the count is increased. the logic of the thing is that the count of the majority element will not be 0 
+The above code selects the first element and then loops around the entire array if the element in the index is the same as the candidate one then the count is increased. the logic of the thing is that the count of the majority element will not be 0 
 '''
 
 14. 283. Move Zeroes
+    class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        non_zero_index = 0
+        """
+        Do not return anything, modify nums in place instead.
+        """
+        for i in range(len(nums)):
+            if nums[i] != 0 :   # check the current value is non zero
+                nums[non_zero_index], nums[i] = nums[i] , nums[non_zero_index] 
+                non_zero_index += 1  # if non zero then swap with non-zero indexes which are 0 and then increase by one value  ie move on to the next index.
+
+        while non_zero_index < len(nums):
+            nums[non_zero_index] = 0   # after all the non-zero values the remaining will be zeroes this ensures that
+            non_zero_index += 1  # Move on to the next index
+15. 
+
     
