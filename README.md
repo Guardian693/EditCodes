@@ -221,4 +221,26 @@ The above code selects the first element and then loops around the entire array 
             
         return max_profit
 
-    
+17.  (35.) Search Insert Position
+    class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        left , right = 0, len(nums) - 1
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if target == nums[mid]:
+                return mid
+
+            if target < nums[mid]:
+                right = mid -1
+            if target > nums[mid]:
+                left = mid +1
+        return left  
+another code is that
+
+from bisect import bisect_left
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        return bisect_left(nums,target)
+
+
