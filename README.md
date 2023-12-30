@@ -203,6 +203,22 @@ The above code selects the first element and then loops around the entire array 
             elif nums[mid] > target:
                 right = mid - 1
         return -1 
-16. 
+16. (121.) Best Time to Buy and Sell Stock
+    class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        if not prices or len(prices) == 1:
+            return 0
+        
+        min_prices = prices[0]
+        max_profit = 0
+
+        for price in prices[1:]:
+            if price < min_prices :
+                min_prices = price
+
+            else:
+                max_profit = max(max_profit, price - min_prices)
+            
+        return max_profit
 
     
