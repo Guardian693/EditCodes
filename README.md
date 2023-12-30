@@ -4,6 +4,7 @@ codes from the leetcode are stored here
 
 
 1. (2351) First Letter to Appear Twice
+
 Ans - class Solution(object):
     def repeatedCharacter(self, s):
         seen = {}
@@ -17,6 +18,7 @@ Ans - class Solution(object):
                 seen[char] = [i, None]
         return first_repeated
 2. (1)Two Sum
+
 Ans class Solution:
     def twoSum(self, nums, target):
         num_indices = {}
@@ -27,12 +29,14 @@ Ans class Solution:
             num_indices[num] = i
     
 3. (1929) Concatenation of Array
+
 Ans  class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
         ans = nums + nums
         return ans
 
 4. (1920) Build Array from Permutation
+
 Ans class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
         n = len(nums)
@@ -42,6 +46,7 @@ Ans class Solution:
         return ans
 
 5. (1512.) Number of Good Pairs   (  A good pair is defined as a pair of indices (i, j) where nums[i] is equal to nums[j] and i is less than j.)
+
 Ans class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         count = 0
@@ -58,6 +63,7 @@ Ans class Solution:
         return count
 
 6. (2011.) Final Value of Variable After Performing Operations
+
 Ans class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         X = 0
@@ -70,6 +76,7 @@ Ans class Solution:
 
 
 7. (1470.) Shuffle the Array
+
 Ans  class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         result = []
@@ -80,6 +87,7 @@ Ans  class Solution:
 
 
 8. (2942.) Find Words Containing Character 
+
 Ans class Solution:
     def findWordsContaining(self, words: List[str], x: str) -> List[int]:
         result = []
@@ -88,6 +96,7 @@ Ans class Solution:
                 result.append(index)
         return result
 9. (1672.) Richest Customer Wealth
+
 Ans class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         max_wealth = 0
@@ -97,6 +106,7 @@ Ans class Solution:
                 max_wealth = wealth
         return max_wealth
 10. (2798.) Number of Employees Who Met the Target
+
 Ans class Solution:
     def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:
         count = 0
@@ -110,6 +120,7 @@ Ans class Solution:
         return sum(1 for hour in hours if hour >= target)
 
 11. (1431.) Kids With the Greatest Number of Candies
+
 Ans python class Solution(object):
     def kidsWithCandies(self, candies, extraCandies):
         max_candies = max(candies)
@@ -120,7 +131,6 @@ Ans python class Solution(object):
             else:
                 result.append(False)
         return result 
-
     python3 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         result = []
@@ -131,7 +141,9 @@ Ans python class Solution(object):
             else:
                 result.append(False)
         return result
+
 12. (136.) Single Number
+
 Ans  class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         result = 0
@@ -149,6 +161,7 @@ result ^= 1 -> result = 7 ^ 1 = 6.
 result ^= 2 -> result = 6 ^ 2 = 4. '''
 
 13. (169.) Majority Element
+
 Ans class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         count = 0
@@ -163,6 +176,7 @@ The above code selects the first element and then loops around the entire array 
 '''
 
 14. (283.) Move Zeroes
+
     class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         non_zero_index = 0
@@ -176,7 +190,8 @@ The above code selects the first element and then loops around the entire array 
         while non_zero_index < len(nums):
             nums[non_zero_index] = 0   # after all the non-zero values the remaining will be zeroes this ensures that
             non_zero_index += 1  # Move on to the next index
-15. (704.) Binary Search
+16. (704.) Binary Search
+
     class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left , right = 0, len(nums) - 1
@@ -189,8 +204,9 @@ The above code selects the first element and then loops around the entire array 
             elif nums[mid] > target:
                 right = mid - 1
         return -1 
-16. (121.) Best Time to Buy and Sell Stock
-    class Solution:
+17. (121.) Best Time to Buy and Sell Stock
+
+     class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices or len(prices) == 1:
             return 0   
@@ -203,7 +219,7 @@ The above code selects the first element and then loops around the entire array 
                 max_profit = max(max_profit, price - min_prices)     
         return max_profit
 
-17.  (35.) Search Insert Position
+19.  (35.) Search Insert Position
     class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left , right = 0, len(nums) - 1
