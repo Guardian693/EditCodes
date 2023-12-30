@@ -8,7 +8,6 @@ Ans - class Solution(object):
     def repeatedCharacter(self, s):
         seen = {}
         first_repeated = ''
-        
         for i, char in enumerate(s):
             if char in seen and seen[char][1] is None:
                 seen[char][1] = i
@@ -16,13 +15,11 @@ Ans - class Solution(object):
                     first_repeated = char
             else:
                 seen[char] = [i, None]
-        
         return first_repeated
 2. (1)Two Sum
 Ans class Solution:
     def twoSum(self, nums, target):
         num_indices = {}
-        
         for i, num in enumerate(nums):
             complement = target - num
             if complement in num_indices:
@@ -38,7 +35,6 @@ Ans  class Solution:
 4. (1920) Build Array from Permutation
 Ans class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
-
         n = len(nums)
         ans = [0] * n
         for i in range(n):
@@ -50,18 +46,15 @@ Ans class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         count = 0
         num_counts = {}
-
         for num in nums:
             if num in num_counts:
                 num_counts[num] += 1
             else:
                 num_counts[num] = 1
-        
         for key in num_counts:
             occurence = num_counts[key]
             if occurence > 1:
                 count += (occurence * (occurence - 1)) // 2       # formula used is nc2 to identify the occurences
-
         return count
 
 6. (2011.) Final Value of Variable After Performing Operations
@@ -100,7 +93,6 @@ Ans class Solution:
         max_wealth = 0
         for customer in accounts:
             wealth = sum(customer)
-
             if wealth > max_wealth:
                 max_wealth = wealth
         return max_wealth
@@ -121,9 +113,7 @@ Ans class Solution:
 Ans python class Solution(object):
     def kidsWithCandies(self, candies, extraCandies):
         max_candies = max(candies)
-
         result = []
-
         for candy in candies:
             if candy + extraCandies >= max_candies:
                 result.append(True)
@@ -163,7 +153,6 @@ Ans class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         count = 0
         canditate = None
-
         for num in nums:
             if count == 0:
                 candidate = num
@@ -184,7 +173,6 @@ The above code selects the first element and then loops around the entire array 
             if nums[i] != 0 :   # check the current value is non zero
                 nums[non_zero_index], nums[i] = nums[i] , nums[non_zero_index] 
                 non_zero_index += 1  # if non zero then swap with non-zero indexes which are 0 and then increase by one value  ie move on to the next index.
-
         while non_zero_index < len(nums):
             nums[non_zero_index] = 0   # after all the non-zero values the remaining will be zeroes this ensures that
             non_zero_index += 1  # Move on to the next index
@@ -192,10 +180,8 @@ The above code selects the first element and then loops around the entire array 
     class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left , right = 0, len(nums) - 1
-
         while left <= right:
             mid = left + (right - left) // 2
-
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target :
@@ -207,18 +193,14 @@ The above code selects the first element and then loops around the entire array 
     class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices or len(prices) == 1:
-            return 0
-        
+            return 0   
         min_prices = prices[0]
         max_profit = 0
-
         for price in prices[1:]:
             if price < min_prices :
-                min_prices = price
-
+                min_prices = pric
             else:
-                max_profit = max(max_profit, price - min_prices)
-            
+                max_profit = max(max_profit, price - min_prices)     
         return max_profit
 
 17.  (35.) Search Insert Position
@@ -227,10 +209,8 @@ The above code selects the first element and then loops around the entire array 
         left , right = 0, len(nums) - 1
         while left <= right:
             mid = left + (right - left) // 2
-
             if target == nums[mid]:
                 return mid
-
             if target < nums[mid]:
                 right = mid -1
             if target > nums[mid]:
