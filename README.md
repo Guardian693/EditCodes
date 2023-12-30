@@ -173,7 +173,7 @@ Ans class Solution:
 The above code selects the first element and then loops around the entire array if the element in the index is the same as the candidate one then the count is increased. the logic of the thing is that the count of the majority element will not be 0 
 '''
 
-14. 283. Move Zeroes
+14. (283.) Move Zeroes
     class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         non_zero_index = 0
@@ -188,6 +188,21 @@ The above code selects the first element and then loops around the entire array 
         while non_zero_index < len(nums):
             nums[non_zero_index] = 0   # after all the non-zero values the remaining will be zeroes this ensures that
             non_zero_index += 1  # Move on to the next index
-15. 
+15. (704.) Binary Search
+    class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        left , right = 0, len(nums) - 1
+
+        while left < right:
+            mid = left + right - left // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target :
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid - 1
+        return -1
+16. 
 
     
