@@ -320,5 +320,6 @@ class Solution:
             pairs = [list(pair) for pair in combinations(nums, n)]
             final_result += pairs
         return final_result
+23.(48) 
 
 
