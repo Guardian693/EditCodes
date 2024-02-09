@@ -376,4 +376,24 @@ Constraints:
 All elements of candidates are distinct.
 1 <= target <= 40
 
+Ans: class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
+        result = []
+
+        def backtrack(start, target , combination):
+            if target == 0:
+                result.append(combination[:])
+                return
+
+            for i in range(start , len(candidates)):
+                if candidates[i] > target:
+                    break
+                combination.append(candidates[i])
+                backtrack(i , target - candidates[i], combination)
+                combination.pop()
+        backtrack(0 , target, [])
+        return result
+        
+
 
