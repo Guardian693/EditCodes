@@ -395,32 +395,37 @@ Ans: class Solution:
         backtrack(0 , target, [])
         return result
 
-25. (49.) Group Anagrams
-Medium
-Topics
-Companies
-Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+25. (1952).  Three Divisors
+Hint
+Given an integer n, return true if n has exactly three positive divisors. Otherwise, return false.
 
-An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
+An integer m is a divisor of n if there exists an integer k such that n = k * m.
 Example 1:
 
-Input: strs = ["eat","tea","tan","ate","nat","bat"]
-Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Input: n = 2
+Output: false
+Explantion: 2 has only two divisors: 1 and 2.
 Example 2:
 
-Input: strs = [""]
-Output: [[""]]
-Example 3:
-
-Input: strs = ["a"]
-Output: [["a"]]
- 
-
+Input: n = 4
+Output: true
+Explantion: 4 has three divisors: 1, 2, and 4.
 Constraints:
 
-1 <= strs.length <= 104
-0 <= strs[i].length <= 100
-strs[i] consists of lowercase English letters.
+1 <= n <= 104
+Ans : class Solution:
+    def isThree(self, n: int) -> bool:
+        if n <= 3:
+            return False
+        count = 0
+        for i in range(2, n//2 + 1):
+            if n % i == 0:
+                count += 1
+            if count > 1:
+                return False
+        if count == 0:
+            return False
+        return True
+
 
 
