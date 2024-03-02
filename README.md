@@ -466,5 +466,10 @@ Ans: class Solution:
             if x % i == 0 and y % i == 0:
                 div.append(i)
         return max(div)
-
+28. [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/description/)
+Ans: class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        new_address = address.replace(".", "[.]")
+        return new_address
+        
 
