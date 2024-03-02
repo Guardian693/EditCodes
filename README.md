@@ -457,5 +457,14 @@ Ans: class Solution:
         return len(com)
 
 27. [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/description/)
+Ans: class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        x = min(nums)
+        y = max(nums)
+        div = []
+        for i in range(1, x+1 ):
+            if x % i == 0 and y % i == 0:
+                div.append(i)
+        return max(div)
 
 
