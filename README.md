@@ -471,5 +471,29 @@ Ans: class Solution:
     def defangIPaddr(self, address: str) -> str:
         new_address = address.replace(".", "[.]")
         return new_address
+
+29. [1. Two Sum](https://leetcode.com/problems/two-sum/description/)
+Ans: class Solution(object):
+    def twoSum(self, nums, target):
+        n = len(nums)
+        for i in range(n):
+            for j in range(i+1, n):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+        return []
+30. [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)
+Ans: class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        string = []
+        for i in range(1,n+1):
+            if i % 3 == 0 and i % 5 == 0:
+                string.append("FizzBuzz")
+            elif i % 5 == 0:
+                string.append("Buzz")
+            elif i % 3 == 0:
+                string.append("Fizz")
+            else:
+                string.append(str(i))
+        return string
         
 
