@@ -495,5 +495,9 @@ Ans: class Solution:
             else:
                 string.append(str(i))
         return string
-31.
+31. [709. To Lower Case](https://leetcode.com/problems/to-lower-case/description/)
+Ans: class Solution:
+    def toLowerCase(self, s: str) -> str:
+        return s.lower()
+        
 
