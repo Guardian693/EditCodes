@@ -499,5 +499,10 @@ Ans: class Solution:
 Ans: class Solution:
     def toLowerCase(self, s: str) -> str:
         return s.lower()
+
+32. [2833. Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/description/)
+Ans: class Solution:
+    def furthestDistanceFromOrigin(self, moves: str) -> int:
+        return moves.count('_') + abs(moves.count('R') - moves.count('L'))
         
 
