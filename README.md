@@ -520,5 +520,6 @@ Ans: class Solution:
                 lr -= 1
         if ud == 0 and lr == 0:
             return True
+34. 
         
 
