@@ -504,5 +504,21 @@ Ans: class Solution:
 Ans: class Solution:
     def furthestDistanceFromOrigin(self, moves: str) -> int:
         return moves.count('_') + abs(moves.count('R') - moves.count('L'))
+
+33. [657. Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/)
+Ans: class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+        ud , lr = 0, 0 
+        for move in moves:
+            if move == 'U':
+                ud += 1
+            elif move == 'D':
+                ud -= 1
+            elif move == 'R':
+                lr += 1
+            else:
+                lr -= 1
+        if ud == 0 and lr == 0:
+            return True
         
 
