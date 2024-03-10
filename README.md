@@ -532,5 +532,26 @@ Ans: class Solution:
             sum += i
         return product - sum
 35. [2535. Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/)
+Ans: class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        element_sum , digit_sum  = 0 , 0
+        digits = [int(digit) for num in nums for digit in str(num)]
+        for i in nums:
+            element_sum += i
+        for digit in digits:
+            digit_sum += digit
+        return element_sum - digit_sum
+
+36. [2180. Count Integers With Even Digit Sum](https://leetcode.com/problems/count-integers-with-even-digit-sum/)
+Ans: class Solution:
+    def countEven(self, num: int) -> int:
+        count = 0
+        for i in range(1, num + 1):
+            digit_sum = sum([int(digit) for digit in str(i)])
+            if digit_sum % 2 == 0:
+                count += 1
+        return count
+
+
         
 
