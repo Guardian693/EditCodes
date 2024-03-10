@@ -520,6 +520,17 @@ Ans: class Solution:
                 lr -= 1
         if ud == 0 and lr == 0:
             return True
-34. 
+34. [1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)
+Ans: class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        product = 1
+        sum = 0
+        num_str = str(n)
+        num_list = [int(digit) for digit in num_str]
+        for i in num_list:
+            product *= i
+            sum += i
+        return product - sum
+35. 
         
 
