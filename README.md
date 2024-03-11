@@ -5,6 +5,39 @@ codes from the leetcode are stored here
 
 1. (2351) First Letter to Appear Twice
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<pre>
+<code id="code-block" class="language-python">
+class Solution(object):
+    def repeatedCharacter(self, s):
+        seen = {}
+        first_repeated = ''
+        for i, char in enumerate(s):
+            if char in seen and seen[char][1] is None:
+                seen[char][1] = i
+                if first_repeated == '' or i < seen[first_repeated][1]:
+                    first_repeated = char
+            else:
+                seen[char] = [i, None]
+        return first_repeated
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+<script>
+  var clipboard = new ClipboardJS('.btn');
+
+  clipboard.on('success', function(e) {
+    console.log('Copied!');
+    e.clearSelection();
+  });
+</script>
+
+
 Ans:
 
 '''
