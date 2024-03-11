@@ -551,6 +551,23 @@ Ans: class Solution:
             if digit_sum % 2 == 0:
                 count += 1
         return count
+37. [507. Perfect Number](https://leetcode.com/problems/perfect-number/)
+Ans: class Solution:
+    def checkPerfectNumber(self, num: int) -> bool:
+        if num <= 1:
+            return False
+        pos = 1
+        for i in range(2, int(sqrt(num))+ 1):
+            if num % i == 0:
+                pos += i
+                if i != num // i:          #the range will be upto the square root.
+                    pos += num // i         # To add divisors > than that we add the counter parts of the divisible number
+        if pos == num:
+            return True
+        else:
+            return False
+
+38. 
 
 
         
