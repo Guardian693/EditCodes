@@ -5,7 +5,9 @@ codes from the leetcode are stored here
 
 1. (2351) First Letter to Appear Twice
 
-Ans - class Solution(object):
+Ans:
+'''
+class Solution(object):
     def repeatedCharacter(self, s):
         seen = {}
         first_repeated = ''
@@ -17,6 +19,7 @@ Ans - class Solution(object):
             else:
                 seen[char] = [i, None]
         return first_repeated
+'''
 2. (1)Two Sum
 
 Ans class Solution:
