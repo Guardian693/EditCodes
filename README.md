@@ -658,7 +658,14 @@ Ans: class Solution:
         else:
             return False
 
-38. 
+38. [1816. Truncate Sentence](https://leetcode.com/problems/truncate-sentence/)
+Ans: class Solution:
+    def truncateSentence(self, s: str, k: int) -> str:
+        s = s.split()
+        s = s[:k]
+        s = ' '.join(s)
+        return s
+        
 
 
         
