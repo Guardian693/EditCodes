@@ -3,7 +3,7 @@
 codes from the leetcode are stored here
 
 
-1. (2351) First Letter to Appear Twice
+1. [(2351) First Letter to Appear Twice](https://leetcode.com/problems/first-letter-to-appear-twice/)
 Ans: 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <pre>
@@ -36,7 +36,7 @@ class Solution(object):
   });
 </script>
 
-2. (1)Two Sum
+2. [(1)Two Sum](https://leetcode.com/problems/two-sum/)
 Ans:
 <pre>
 <code id="code-block" class="language-python">
@@ -55,26 +55,45 @@ class Solution:
   Copy code
 </button>
     
-4. (1929) Concatenation of Array
+3. [(1929) Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)
 
-Ans  class Solution:
+Ans:
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
         ans = nums + nums
         return ans
+</code>
+</pre>
 
-4. (1920) Build Array from Permutation
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
 
-Ans class Solution:
+4. [(1920) Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/)
+Ans:
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
         n = len(nums)
         ans = [0] * n
         for i in range(n):
             ans[i] = nums[nums[i]]
         return ans
+</code>
+</pre>
 
-5. (1512.) Number of Good Pairs   (  A good pair is defined as a pair of indices (i, j) where nums[i] is equal to nums[j] and i is less than j.)
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
 
-Ans class Solution:
+5. [(1512.) Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)   (  A good pair is defined as a pair of indices (i, j) where nums[i] is equal to nums[j] and i is less than j.)
+Ans
+<pre>
+<code id="code-block" class="language-python">
+ class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         count = 0
         num_counts = {}
@@ -88,10 +107,19 @@ Ans class Solution:
             if occurence > 1:
                 count += (occurence * (occurence - 1)) // 2       # formula used is nc2 to identify the occurences
         return count
+    </code>
+</pre>
 
-6. (2011.) Final Value of Variable After Performing Operations
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
 
-Ans class Solution:
+6. [(2011.) Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)
+
+Ans 
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         X = 0
         for operation in operations:
@@ -100,31 +128,58 @@ Ans class Solution:
             if operation == '--X' or operation == 'X--':
                 X -= 1
         return X
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
 
 
-7. (1470.) Shuffle the Array
+7. [(1470.) Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
 
-Ans  class Solution:
+Ans
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         result = []
         for i in range(n):
             result.append(nums[i])
             result.append(nums[i+n])
         return result
+</code>
+</pre>
 
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
 
-8. (2942.) Find Words Containing Character 
+8. [(2942.) Find Words Containing Character ](https://leetcode.com/problems/find-words-containing-character/)
 
-Ans class Solution:
+Ans 
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
     def findWordsContaining(self, words: List[str], x: str) -> List[int]:
         result = []
         for index,  word in enumerate(words):
             if x in word:
                 result.append(index)
         return result
-9. (1672.) Richest Customer Wealth
+    </code>
+</pre>
 
-Ans class Solution:
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+9. [(1672.) Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
+
+Ans 
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         max_wealth = 0
         for customer in accounts:
@@ -132,6 +187,13 @@ Ans class Solution:
             if wealth > max_wealth:
                 max_wealth = wealth
         return max_wealth
+    </code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
 10. (2798.) Number of Employees Who Met the Target
 
 Ans class Solution:
