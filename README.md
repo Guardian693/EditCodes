@@ -37,6 +37,7 @@ class Solution(object):
 </script>
 
 2. [(1)Two Sum](https://leetcode.com/problems/two-sum/)
+   
 Ans:
 <pre>
 <code id="code-block" class="language-python">
@@ -72,6 +73,7 @@ class Solution:
 </button>
 
 4. [(1920) Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/)
+
 Ans:
 <pre>
 <code id="code-block" class="language-python">
