@@ -659,7 +659,8 @@ Ans: class Solution:
             return False
 
 38. [1816. Truncate Sentence](https://leetcode.com/problems/truncate-sentence/)
-Ans:  <pre>
+Ans:
+<pre>
 <code id="code-block" class="language-python">
 class Solution:
     def truncateSentence(self, s: str, k: int) -> str:
@@ -677,7 +678,8 @@ class Solution:
     
 
 40. [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
-Ans:  <pre>
+Ans:
+<pre>
 <code id="code-block" class="language-python">
 class Solution:
     def reverseWords(self, s: str) -> str:
