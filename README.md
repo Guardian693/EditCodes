@@ -659,14 +659,39 @@ Ans: class Solution:
             return False
 
 38. [1816. Truncate Sentence](https://leetcode.com/problems/truncate-sentence/)
-Ans: class Solution:
+Ans:  <pre>
+<code id="code-block" class="language-python">
+class Solution:
     def truncateSentence(self, s: str, k: int) -> str:
         s = s.split()
         s = s[:k]
         s = ' '.join(s)
         return s
-        
+    </code>
+</pre>
 
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+    
+
+40. [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
+Ans:  <pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        reversed_string = [word[::-1] for word in s.split()]
+        r_s = ' '.join(reversed_string)
+        return r_s
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+40. 
 
         
 
