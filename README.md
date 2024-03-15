@@ -815,3 +815,20 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
 </button>
+
+45. [2154. Keep Multiplying Found Values by Two](https://leetcode.com/problems/keep-multiplying-found-values-by-two/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def findFinalValue(self, nums: List[int], original: int) -> int:
+        while original in nums:
+            original *= 2
+        return original
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+46.
