@@ -677,8 +677,8 @@ class Solution:
 
     
 
-40. [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
-Ans:
+39. [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
+
 <pre>
 <code id="code-block" class="language-python">
 class Solution:
@@ -693,7 +693,32 @@ class Solution:
   Copy code
 </button>
 
-40. 
+40. [2706. Buy Two Chocolates](https://leetcode.com/problems/buy-two-chocolates/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def buyChoco(self, prices: List[int], money: int) -> int:
+        # Sort the Array in Increasing Order
+        prices.sort()
+
+        # Minimum Cost
+        min_cost = prices[0] + prices[1]
+
+        # We can buy chocolates only if we have enough money
+        if min_cost <= money:
+            # Return the Amount of Money Left
+            return money - min_cost
+        else:
+            # We cannot buy chocolates. Return the initial amount of money
+            return money
+
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
 
         
 
