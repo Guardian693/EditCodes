@@ -739,3 +739,61 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
 </button>
+
+42. [520. Detect Capital](https://leetcode.com/problems/detect-capital/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        if len(word) == 0:
+            return True
+        
+        first_capital = word[0].isupper() and all(i.islower() for i in word[1:])
+        all_upper = all(i.isupper() for i in word)
+        all_lower = all(i.islower() for i in word)
+
+        return first_capital or all_upper or all_lower
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        if word.upper() == word:
+            return True
+        elif word.lower() == word:
+            return True
+        elif word.capitalize() == word:
+            return True
+        return False
+        return first_capital or all_upper or all_lower
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
+
+43. [1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
+        l1 = ''.join(word1)
+        l2 = ''.join(word2)
+
+        if l1 == l2:
+            return True
+        else:
+            return False
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
