@@ -797,4 +797,21 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
 </button>
+
 44. [1528. Shuffle String](https://leetcode.com/problems/shuffle-string/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        combined_list = list(zip(indices, s))
+        combined_list.sort()
+        sorted_list = ''.join(letter for _,letter in combined_list) # _ , is just used as an placeholder 
+        return sorted_list                                   # It does not take the value of number it skips it. and only take the string part
+
+
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button>
