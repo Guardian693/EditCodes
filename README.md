@@ -848,4 +848,21 @@ class Solution:
   Copy code
 </button
 
-47. 
+47. [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def fib(self, n: int) -> int:
+        f1 , f2 = 0,  1
+
+        for i in range(n):
+            f1 , f2 = f2 , f1 + f2
+        return f1
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button
+
+48. 
