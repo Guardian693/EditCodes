@@ -846,7 +846,7 @@ class Solution:
 
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
-</button
+</button>
 
 47. [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
 <pre>
@@ -863,7 +863,7 @@ class Solution:
 
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
-</button
+</button>
 
 48. [1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)
 <pre>
@@ -888,7 +888,7 @@ class Solution:
 
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
-</button
+</button>
 
 49. [2769. Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number/)
 <pre>
@@ -901,7 +901,7 @@ class Solution:
 
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
-</button
+</button>
         
 50 [268. Missing Number](https://leetcode.com/problems/missing-number/)
 <pre>
@@ -917,4 +917,20 @@ class Solution:
 
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
-</button        
+</button>      
+
+51. [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def alternateDigitSum(self, n: int) -> int:
+        n_str = str(n)
+        num1 = [int(n_str[i]) for i in range(len(n_str)) if i % 2 != 0]    # here in string the right most digit has the index 0 that why the positive sign numbers go to num2
+        num2 = [int(n_str[i]) for i in range(len(n_str)) if i % 2 == 0]
+        return sum(num2) - sum(num1)       
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  
+</button>  
