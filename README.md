@@ -916,7 +916,7 @@ class Solution:
 </pre>
 
 <button class="btn" data-clipboard-target="#code-block">
-  Copy code
+
 </button>      
 
 51. [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/)
