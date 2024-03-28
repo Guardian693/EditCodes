@@ -865,4 +865,27 @@ class Solution:
   Copy code
 </button
 
-48. 
+48. [1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def interpret(self, command: str) -> str:
+        com = ''
+        i = 0
+        while i < len(command):
+            if command[i] == 'G':
+                com += 'G'
+                i = i + 1
+            elif command[i: i +2 ] == '()':
+                com += 'o'
+                i = i + 2
+            elif command[i : i+ 4] == '(al)':
+                com += 'al'
+                i = i + 4
+        return com
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button
