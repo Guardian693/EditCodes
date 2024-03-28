@@ -889,3 +889,32 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   Copy code
 </button
+
+49. [2769. Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def theMaximumAchievableX(self, num: int, t: int) -> int:
+         return num+t+t
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button
+        
+50 [268. Missing Number](https://leetcode.com/problems/missing-number/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        expected_sum = (n * (n+1)) // 2
+        actual_sum = sum(nums)
+        return expected_sum - actual_sum
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  Copy code
+</button        
