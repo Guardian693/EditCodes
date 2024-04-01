@@ -934,4 +934,18 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   
 </button>  
-52. [
+52. [2129. Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/)
+<pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def capitalizeTitle(self, title: str) -> str:
+        word = title.split()
+        cap_word = [i.capitalize() if len(i) >= 3 else i.lower() for i in word]
+        cap_sen = " ".join(cap_word)
+        return cap_sen
+</code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+  
+</button>  
