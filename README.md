@@ -934,6 +934,7 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
   
 </button>  
+
 52. [2129. Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/)
 <pre>
 <code id="code-block" class="language-python">
@@ -947,5 +948,20 @@ class Solution:
 </pre>
 
 <button class="btn" data-clipboard-target="#code-block">
-  
-</button>  
+</button> 
+    
+53. [1317. Convert Integer to the Sum of Two No-Zero Integers](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/)
+  <pre>
+<code id="code-block" class="language-python">
+class Solution:
+    def getNoZeroIntegers(self, n: int) -> List[int]:
+        for a in range(1, n):
+            b = n - a
+            if '0' not in str(a) and '0' not in str(b):
+                return [a,b]
+        return []
+    </code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+</button> 
