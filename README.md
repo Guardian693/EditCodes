@@ -986,4 +986,16 @@ class Solution:
 <button class="btn" data-clipboard-target="#code-block">
 </button> 
 
-55. 
+55. [1688. Count of Matches in Tournament](https://leetcode.com/problems/count-of-matches-in-tournament/)
+<pre>
+<code id="code-block" class="language-python">
+    class Solution:
+    def numberOfMatches(self, n: int) -> int:
+        return n -1
+     </code>
+</pre>
+
+<button class="btn" data-clipboard-target="#code-block">
+</button> 
+
+
